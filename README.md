@@ -53,3 +53,9 @@ wearable-fitness-tracker/
 ├── docs/
 ├── Makefile
 └── README.md
+## How to Build
+
+The project uses a Makefile for compilation.
+
+```bash
+make

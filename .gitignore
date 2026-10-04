@@ -1,2 +1,3 @@
 fitness_tracker
 *.o
+logs/fitness_log.txt
