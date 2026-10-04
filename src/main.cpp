@@ -1,12 +1,20 @@
 #include <iostream>
 #include <unistd.h>
 #include <sys/wait.h>
+#include <sys/types.h>
 #include "sensor.h"
 #include "logger.h"
 
 using namespace std;
 
 int main() {
+
+    int pipefd[2];
+
+    if (pipe(pipefd) == -1) {
+        cout << "Pipe creation failed" << endl;
+        return 1;
+    }
 
     pid_t child = fork();
 
